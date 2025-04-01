@@ -1,0 +1,93 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, nav, section {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige; /* <-- Fixed semicolon issue */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #001529;
+    margin-bottom: 10px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgb(29, 54, 0);
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: rgb(23, 42, 0);
+}
+
+/* Content Section */
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Headings */
+h2, h3 {
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
