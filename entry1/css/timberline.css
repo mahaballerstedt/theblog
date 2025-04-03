@@ -1,49 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap');
+
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: "Poppins", sans-serif; 
+    margin: 0;
     padding: 0;
-    background-color: beige;
+    background-color: #f5eedd;
     color: #333;
 }
 
 /* Header */
 h1 {
     text-align: center;
-    background-color: rgb(29, 54, 0);
-    color: beige;
+    background-color: #1e3932;
+    color: #d4e9e2;
     padding: 20px;
-    margin: 20px 0;
+    margin: 0;
+    font-family: "Notable", sans-serif; 
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Navigation Bar */
 nav {
     display: flex;
     justify-content: center;
-    background-color: rgb(29, 54, 0);
+    background-color: #1e3932;
     padding: 10px;
+    gap: 30px;
 }
 
 nav a {
-    color: rgb(208, 96, 4);
+    color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: normal;
     transition: color 0.3s;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px; /* Space between letters */
+    word-spacing: 5px; /* Increased space between words */
+    padding: 10px 15px; /* Clickable space around links */
 }
 
 nav a:hover {
-    color: #ffcc00;
+    color: #dff9ba;
 }
 
 /* Section Styles */
 section {
     max-width: 800px;
-    margin: 60px auto;
-    background: beige;
-    padding: 25px;
+    margin: 40px auto; /* Increased margin */
+    background: #f5eedd;
+    padding: 20px;
     border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Headings */
+h2, h3 {
+    color: #1e3932;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500; /* Thinner text */
+    margin-top: 30px; /* Increased space above headings */
+    margin-bottom: 20px; /* More space below headings */
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 25px; /* Increased spacing between paragraphs */
 }
 
 /* Image Styling */
@@ -53,16 +81,7 @@ section {
     max-width: 100%;
 }
 
-/* Headings */
-h2, h3 {
-    color: rgb(29, 54, 0);
-}
 
-/* Paragraphs */
-p {
-    line-height: 1.6;
-    font-size: 16px;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -79,4 +98,11 @@ p {
         width: 90%;
         padding: 15px;
     }
+}
+
+/* Poppins Black Italic Class */
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
 }

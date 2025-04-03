@@ -1,35 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap');
+
+/* General Styles */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Poppins", sans-serif; 
     margin: 0;
     padding: 0;
-    background-color: beige;
+    background-color: #f5eedd;
+    color: #333;
 }
 
+/* Hero Section */
+
 .hero {
-    background: url('hero.jpg') no-repeat center center/cover;
+    background: url('img/homebackground.png') no-repeat center center;
+    background-size: 100% 100%; /* Forces it to fit within the header */
     text-align: center;
-    padding: 50px 20px;
-    color: rgb(0, 0, 0);
+    padding: 0; /* Remove extra padding */
+    color: #1e3932;
+    height: 100px; /* Adjust the height to match a header */
+    width: 100%; /* Ensures it spans the full width */
 }
 
 .hero h1 {
     font-size: 2.5em;
     margin: 0;
+    font-family: "Notable", sans-serif;
+    color: #d4e9e2;
 }
 
+/* Navigation Bar */
 nav {
-    background: rgb(23, 43, 0);
+    display: flex;
+    justify-content: center;
+    background-color: #1e3932;
     padding: 10px;
-    text-align: center;
+    gap: 30px;
 }
 
 nav a {
-    color: rgb(152, 69, 1);
+    color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    padding: 10px 15px;
 }
 
+nav a:hover {
+    color: #dff9ba;
+}
+
+/* Intro Section */
 .intro {
     padding: 20px;
     text-align: center;
@@ -37,12 +61,13 @@ nav a {
     margin: auto;
 }
 
+/* Resorts Section */
 .resorts {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    justify-content: space-around; /* Space out the resorts evenly */
     padding: 20px;
+    gap: 20px; /* Adds space between the resort items */
+    flex-wrap: nowrap; /* Ensures items stay in a single line */
 }
 
 .resort {
@@ -51,36 +76,97 @@ nav a {
     text-align: center;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex: 0 1 30%; /* Ensures each resort item takes up 30% of the container width */
 }
 
 .resort img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 5px;
+    width: 100%; /* Makes the image fill the width of the container */
+    height: 200px; /* Sets a fixed height for the images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 0;
 }
 
-@media (max-width: 768px) {
-    .resorts {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 /* About Me Section */
+
 .about-me {
     max-width: 800px;
-    margin: 40px auto;
     padding: 20px;
-    background: rgb(60, 100, 57);
-    border-radius: 10px;
-    text-align: center;
+    background: #1e3932;
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Centers the section horizontally */
+    position: relative;
 }
 
+/* Vertical About Me Header */
 .about-me h2 {
+    writing-mode: vertical-rl; /* Makes text vertical */
+    transform: rotate(180deg); /* Corrects text direction */
+    font-size: 48px; /* Increased size */
+    color: #dff9ba;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 900;
+    margin-right: 20px;
+}
+
+/* About Me Content Wrapper */
+.about-me-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds space between text and image */
+    flex: 1; /* Allows the section to expand */
+}
+
+/* About Me Text */
+.about-me-text {
+    text-align: left; /* Aligns text to the left */
     color: white;
+    flex: 1;
 }
 
 .about-me p {
     font-size: 16px;
     line-height: 1.6;
+    margin: 0;
+    color: white;
+}
+
+/* About Me Image */
+.about-me img {
+    width: 70%; /* Increased size */
+    max-width: 200px; /* Adjusted max width */
+    border-radius: 0; /* Removes the circular border */
+    display: block;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resorts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    section {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* Poppins Black Italic Class */
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
 }
