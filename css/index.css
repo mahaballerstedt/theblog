@@ -22,7 +22,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 50px;
     margin: 0;
     font-family: "Poppins", sans-serif; /* Changed from Notable */
     color: #d4e9e2;
@@ -102,7 +102,7 @@ nav a:hover {
 .about-me h2 {
     writing-mode: vertical-rl; /* Makes text vertical */
     transform: rotate(180deg); /* Corrects text direction */
-    font-size: 64px; /* Increased size */
+    font-size: 50px; /* Increased size */
     color: #dff9ba;
     text-transform: uppercase;
     letter-spacing: 3px;
