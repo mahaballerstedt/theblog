@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap');
 
 /* General Styles */
@@ -25,7 +24,7 @@ body {
 .hero h1 {
     font-size: 2.5em;
     margin: 0;
-    font-family: "Notable", sans-serif;
+    font-family: "Poppins", sans-serif; /* Changed from Notable */
     color: #d4e9e2;
 }
 
@@ -90,7 +89,7 @@ nav a:hover {
 /* About Me Section */
 
 .about-me {
-    max-width: 800px;
+    width: 100%;
     padding: 20px;
     background: #1e3932;
     display: flex;
@@ -103,12 +102,12 @@ nav a:hover {
 .about-me h2 {
     writing-mode: vertical-rl; /* Makes text vertical */
     transform: rotate(180deg); /* Corrects text direction */
-    font-size: 48px; /* Increased size */
+    font-size: 64px; /* Increased size */
     color: #dff9ba;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 900;
-    margin-right: 20px;
+    margin-right: 00px;
 }
 
 /* About Me Content Wrapper */
@@ -135,10 +134,11 @@ nav a:hover {
 
 /* About Me Image */
 .about-me img {
-    width: 70%; /* Increased size */
-    max-width: 200px; /* Adjusted max width */
-    border-radius: 0; /* Removes the circular border */
+    width: 70%;
+    max-width: 200px;
+    border-radius: 0;
     display: block;
+    margin-left: 20px; /* Add space from the left edge */
 }
 
 
@@ -162,7 +162,17 @@ nav a:hover {
         width: 90%;
         padding: 15px;
     }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me img {
+        margin: 20px 0 0 0; /* space above the image */
+    }
 }
+
 
 /* Poppins Black Italic Class */
 .poppins-black-italic {
