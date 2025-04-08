@@ -12,19 +12,21 @@ body {
 /* Hero Section */
 
 .hero {
-    background: url('img/homebackground.png') no-repeat center center;
-    background-size: 100% 100%; /* Forces it to fit within the header */
-    text-align: center;
-    padding: 0; /* Remove extra padding */
-    color: #1e3932;
-    height: 100px; /* Adjust the height to match a header */
-    width: 100%; /* Ensures it spans the full width */
+    background: url('../img/mthoodpanback.png') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero h1 {
     font-size: 50px;
     margin: 0;
-    font-family: "Poppins", sans-serif; /* Changed from Notable */
+    font-family: "Poppins", sans-serif;
     color: #d4e9e2;
 }
 
@@ -60,13 +62,14 @@ nav a:hover {
     margin: auto;
 }
 
+
 /* Resorts Section */
 .resorts {
     display: flex;
-    justify-content: space-around; /* Space out the resorts evenly */
+    justify-content: space-around;
     padding: 20px;
-    gap: 20px; /* Adds space between the resort items */
-    flex-wrap: nowrap; /* Ensures items stay in a single line */
+    gap: 20px;
+    flex-wrap: nowrap;
 }
 
 .resort {
@@ -75,14 +78,34 @@ nav a:hover {
     text-align: center;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    flex: 0 1 30%; /* Ensures each resort item takes up 30% of the container width */
+    flex: 0 1 30%;
+    border: 1px solid #ccc;
+    transition: transform 0.8s ease, box-shadow 0.8s ease, border-color 0.8s ease;
+}
+
+.resort:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    border-color: #1e3932;
 }
 
 .resort img {
-    width: 100%; /* Makes the image fill the width of the container */
-    height: 200px; /* Sets a fixed height for the images */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 0;
+    transition: transform 0.8s ease;
+}
+
+/* Resort Header Link Styling (remove underline) */
+.resort h3 a {
+    color: #006241; /* Set the color to match the rest of the site */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the header text bold */
+}
+
+.resort h3 a:hover {
+    color: #1e3932; /* Hover color for the link */
 }
 
 
@@ -91,7 +114,7 @@ nav a:hover {
 .about-me {
     width: 100%;
     padding: 20px;
-    background: #1e3932;
+    background: #00452e;
     display: flex;
     align-items: center;
     margin: 0 auto; /* Centers the section horizontally */
@@ -179,4 +202,9 @@ nav a:hover {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: italic;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
