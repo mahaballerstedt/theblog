@@ -127,12 +127,13 @@ nav a:hover {
 /* About Me Section */
 .about-me {
     width: 100%;
-    padding: 20px;
+    padding: 40px;  /* Increased padding for bigger section */
     background: #003322;
     display: flex;
     align-items: center;
     margin: 0 auto; /* Centers the section horizontally */
     position: relative;
+    min-height: 400px; /* Increased minimum height */
 }
 
 /* Vertical About Me Header */
@@ -170,13 +171,14 @@ nav a:hover {
 
 /* About Me Image */
 .about-me img {
-    width: 70%;
-    max-width: 200px;
+    width: 80%;  /* Increased width of the image */
+    max-width: 300px; /* Increased max-width for the image */
     border-radius: 0;
     display: block;
     margin-left: 20px; 
-    border: 3px solid white; /* ← added border */
+    border: 3px solid white; 
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .resorts {
@@ -201,10 +203,12 @@ nav a:hover {
     .about-me {
         flex-direction: column;
         align-items: center;
+        min-height: 450px;  /* Increased min-height on small screens */
     }
 
     .about-me img {
-        margin: 20px 0 0 0; 
+        width: 90%;  /* Adjusted width of the image for small screens */
+        max-width: 250px; /* Adjusted max-width for the image */
     }
 }
 
