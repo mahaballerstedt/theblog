@@ -37,9 +37,9 @@ nav a {
     font-weight: normal;
     transition: color 0.3s;
     font-family: "Poppins", sans-serif;
-    letter-spacing: 1px; /* Space between letters */
-    word-spacing: 5px; /* Increased space between words */
-    padding: 10px 15px; /* Clickable space around links */
+    letter-spacing: 1px; 
+    word-spacing: 5px; 
+    padding: 10px 15px; 
 }
 
 nav a:hover {
@@ -49,7 +49,7 @@ nav a:hover {
 /* Section Styles */
 section {
     max-width: 800px;
-    margin: 40px auto; /* Increased margin */
+    margin: 40px auto; 
     background: #f5eedd;
     padding: 20px;
     border-radius: 10px;
@@ -60,9 +60,9 @@ section {
 h2, h3 {
     color: #006241;
     font-family: "Poppins", sans-serif;
-    font-weight: 800; /* Bolder text */
-    margin-top: 30px; /* Increased space above headings */
-    margin-bottom: 20px; /* More space below headings */
+    font-weight: 800; 
+    margin-top: 30px; 
+    margin-bottom: 20px; 
 }
 
 /* Paragraphs */
@@ -70,7 +70,7 @@ p {
     line-height: 1.6;
     font-size: 16px;
     font-family: "Poppins", sans-serif;
-    margin-bottom: 25px; /* Increased spacing between paragraphs */
+    margin-bottom: 25px; 
 }
 
 /* Image Styling */
@@ -84,7 +84,7 @@ p {
 	display: flex;
 	justify-content: center;
 	gap: 20px;
-	flex-wrap: wrap; /* ensures responsiveness */
+	flex-wrap: wrap; 
 	margin: 30px 0;
 }
 
@@ -92,8 +92,8 @@ p {
 	width: 45%;
 	height: auto;
 	object-fit: cover;
-    border: 4px solid rgb(0, 56, 34); /* Dark green border */
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    border: 4px solid rgb(0, 56, 34);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15); 
 }
 
 /* Responsive Design */
