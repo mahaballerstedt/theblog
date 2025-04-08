@@ -1,42 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap');
 
 /* General Styles */
-body {
-    font-family: "Poppins", sans-serif; 
+* {
+    box-sizing: border-box; /* Prevents padding/border from affecting width */
+}
+
+html, body {
     margin: 0;
     padding: 0;
+    width: 100%;  /* Ensures the body width is confined to the screen */
+    height: 100%; /* Ensures the body height is confined to the screen */
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+body {
+    font-family: "Poppins", sans-serif; 
     background-color: #f5eedd;
     color: #333;
 }
 
 /* Hero Section */
-
 .hero {
     background: url('../img/mthoodpanback.png') no-repeat center center;
     background-size: cover;
     height: 300px;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Padding for spacing */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end; /* Push content (h1) to the bottom */
+    justify-content: center; /* Center content horizontally */
 }
 
 .hero h1 {
     font-size: 50px;
     margin: 0;
-    font-family: "Poppins", sans-serif;
     color: #d4e9e2;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Optional: improves contrast on image */
+    padding-top: 5px;
 }
 
-/* Navigation Bar */
 nav {
     display: flex;
     justify-content: center;
     background-color: #1e3932;
     padding: 10px;
     gap: 30px;
+    width: 100%;
+    position: relative; /* Make sure it's not fixed or sticky */
 }
 
 nav a {
@@ -62,14 +73,13 @@ nav a:hover {
     margin: auto;
 }
 
-
 /* Resorts Section */
 .resorts {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     gap: 20px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .resort {
@@ -80,13 +90,12 @@ nav a:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     flex: 0 1 30%;
     border: 1px solid #ccc;
-    transition: transform 0.8s ease, box-shadow 0.8s ease, border-color 0.8s ease;
+    transition: box-shadow 0.8s ease, border-color 0.8s ease;
 }
 
 .resort:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
-    border-color: #1e3932;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: #aaa;
 }
 
 .resort img {
@@ -94,27 +103,32 @@ nav a:hover {
     height: 200px;
     object-fit: cover;
     border-radius: 0;
-    transition: transform 0.8s ease;
+    transition: transform 1s ease, box-shadow 0.5s ease;
+}
+
+.resort img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 1s ease, box-shadow 0.5s ease;
 }
 
 /* Resort Header Link Styling (remove underline) */
 .resort h3 a {
-    color: #006241; /* Set the color to match the rest of the site */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make the header text bold */
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .resort h3 a:hover {
-    color: #1e3932; /* Hover color for the link */
+    color: #57ae91;
 }
 
-
 /* About Me Section */
-
 .about-me {
     width: 100%;
     padding: 20px;
-    background: #00452e;
+    background: #003322;
     display: flex;
     align-items: center;
     margin: 0 auto; /* Centers the section horizontally */
@@ -123,27 +137,26 @@ nav a:hover {
 
 /* Vertical About Me Header */
 .about-me h2 {
-    writing-mode: vertical-rl; /* Makes text vertical */
-    transform: rotate(180deg); /* Corrects text direction */
-    font-size: 50px; /* Increased size */
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg); 
+    font-size: 50px; 
     color: #dff9ba;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 900;
-    margin-right: 00px;
 }
 
 /* About Me Content Wrapper */
 .about-me-content {
     display: flex;
     align-items: center;
-    gap: 20px; /* Adds space between text and image */
-    flex: 1; /* Allows the section to expand */
+    gap: 20px; 
+    flex: 1; 
 }
 
 /* About Me Text */
 .about-me-text {
-    text-align: left; /* Aligns text to the left */
+    text-align: left;
     color: white;
     flex: 1;
 }
@@ -161,10 +174,9 @@ nav a:hover {
     max-width: 200px;
     border-radius: 0;
     display: block;
-    margin-left: 20px; /* Add space from the left edge */
+    margin-left: 20px; 
+    border: 3px solid white; /* ← added border */
 }
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .resorts {
@@ -192,19 +204,13 @@ nav a:hover {
     }
 
     .about-me img {
-        margin: 20px 0 0 0; /* space above the image */
+        margin: 20px 0 0 0; 
     }
 }
-
 
 /* Poppins Black Italic Class */
 .poppins-black-italic {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: italic;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
 }
